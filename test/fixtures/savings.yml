@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  recdate: 2016-03-19
+  title: MyString
+  owner: MyString
+  note: MyText
+  video: MyString
+
+two:
+  recdate: 2016-03-19
+  title: MyString
+  owner: MyString
+  note: MyText
+  video: MyString

@@ -1,0 +1,21 @@
+<%- model_class = Saving -%>
+
+<%
+=begin
+%>
+
+<div class="page-header">
+  <h4>動画・静止画一覧</h4>
+</div>
+
+<%
+=end
+%>
+
+<% content_for(:title) do %>
+  動画・静止画検索
+<% end %>
+
+<%= form_for(@saving, url: search_savings_path, html: { method: :get, class: 'form-horizontal', role: 'form' }) do |f| %>
+  <%= render 'search_form', f: f %>
+<% end %>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grpvideo</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+    <%= render "shared/header" %>
+    <% flash.each do |name, msg| %>
+      <div class="alert alert-<%= name == "notice" ? "success" : "error" %>">
+        <a class="close" data-dismiss="alert">×</a> <!-- アラートダイアログに×ボタンをつける -->
+        <%= msg %>
+      </div>
+    <% end %>
+    <%= yield %>
+    <%= render "shared/footer" %>
+  </div>
+</body>
+</html>
